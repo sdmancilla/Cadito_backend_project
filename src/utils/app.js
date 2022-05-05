@@ -12,6 +12,22 @@ app.use(express.json())
 const user = require('../routes/users')
 app.use('/users', user)
 
+const posts = require('../routes/posts')
+app.use('/posts', posts)
+
+const cart = require('../routes/cart')
+app.use('/cart', cart)
+
+const history = require('../routes/history')
+app.use('/history', history)
+
+const reviews = require('../routes/reviews')
+app.use('/reviews', reviews)
+
+const products = require('../routes/products')
+app.use('/product', products);
+
+
 app.get('*', (req, res) => {
     res.status(404).json({error: "Not Found"})
 });

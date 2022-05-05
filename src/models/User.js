@@ -3,9 +3,11 @@ const Schema = require('../utils/conection')
 const bcrypt = require('bcrypt')
 
 const UserSchema = new Schema({
-    name: {type: String},
+    display_name: {type: String, required: true},
     username: {type: String, required: true},
     password: {type: String, required: true},
+    cart: [],
+    history: [],
     versionKey: false
 })
 
